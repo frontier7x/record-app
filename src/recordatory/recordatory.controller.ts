@@ -21,6 +21,12 @@ export class RecordatoryController {
 
     @Post()
     async createRecordatory(@Body() RecordatoryDto: RecordatoryDto){
-        return await this.recordatoryService.createRecordatory(RecordatoryDto)
+        try {
+            console.log("record", RecordatoryDto)
+            
+            return await this.recordatoryService.createRecordatory(RecordatoryDto)    
+        } catch (error) {
+            console.log("error", error);    
+        }
     }
 }

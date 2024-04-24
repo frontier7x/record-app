@@ -12,7 +12,5 @@ export class RecordatoryDto {
     is_archived: Boolean;
     tags: JSON;
     user_id: string;
-    created: Date;
-    updated: Date;
   }
   
